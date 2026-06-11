@@ -13,11 +13,11 @@
         }
     },
     "require": {
-        "php": "^8.0|^8.1",
+        "php": "^8.1",
         "appnave/nave-sdk-iss": "^0.2",
         "appnave/nave-crm-sp": "^0.2",
         "appnave/nave-hub-sp": "^0.2",
-        "appnave/nave-produto-sp": "^0.2",
+        "appnave/nave-cadastros-sp": "^0.2",
         "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0|^12.0",
         "illuminate/database": "^8.0|^9.0|^10.0|^11.0|^12.0",
         "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
@@ -25,11 +25,10 @@
         "spatie/laravel-package-tools": "^1.12"
     },
     "require-dev": {
-        "brianium/paratest": "^6.6",
+        "brianium/paratest": "^7.0",
         "laravel/pint": "^1.14",
-        "nunomaduro/collision": "^6.2",
-        "orchestra/testbench": "^7.6",
-        "phpunit/phpunit": "^9.5"
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.0"
     },
     "config": {
         "sort-packages": true
@@ -59,11 +58,11 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/appnave/nave-produto-sp.git"
+            "url": "https://github.com/appnave/nave-cadastros-sp.git"
         }
     ],
     "prefer-stable": true,
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "scripts": {
         "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
         "test-coverage": "php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-html coverage",

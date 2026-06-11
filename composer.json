@@ -44,6 +44,24 @@
             }
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/appnave/nave-sdk-iss.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/appnave/nave-crm-sp.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/appnave/nave-hub-sp.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/appnave/nave-produto-sp.git"
+        }
+    ],
     "prefer-stable": true,
     "minimum-stability": "dev",
     "scripts": {

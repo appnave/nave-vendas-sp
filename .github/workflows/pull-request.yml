@@ -31,7 +31,8 @@ jobs:
 
       - name: Install dependencies
         env:
-          COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+          COMPOSER_AUTH: >-
+            {"github-oauth":{"github.com":"${{ secrets.COMPOSER_TOKEN }}"}}
         run: composer install --no-interaction --no-progress --prefer-dist
 
       - name: Check style

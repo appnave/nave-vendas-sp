@@ -1,5 +1,7 @@
 {
     "name": "appnave/nave-vendas-sp",
+    "description": "Pacote Laravel para sincronização e importação de dados do SP via RabbitMQ.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "BildVitta\\SpVendas\\": "src/"

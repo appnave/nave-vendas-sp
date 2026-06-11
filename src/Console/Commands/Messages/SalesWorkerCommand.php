@@ -137,16 +137,12 @@ class SalesWorkerCommand extends Command
             'heartbeat' => $heartbeat
         ];
 
+        $useSsl = config('sp-vendas.rabbitmq.use_ssl', true);
         if (app()->isLocal()) {
-            $this->connection = new AMQPStreamConnection(
-                host: $host,
-                port: $port,
-                user: $user,
-                password: $password,
-                vhost: $virtualhost,
-                heartbeat: $heartbeat
-            );
-        } else {
+            $useSsl = false;
+        }
+
+        if ($useSsl) {
             $this->connection = new AMQPSSLConnection(
                 host: $host,
                 port: $port,
@@ -156,6 +152,17 @@ class SalesWorkerCommand extends Command
                 ssl_options: $sslOptions,
                 options: $options
             );
+
+            return;
         }
+
+        $this->connection = new AMQPStreamConnection(
+            host: $host,
+            port: $port,
+            user: $user,
+            password: $password,
+            vhost: $virtualhost,
+            heartbeat: $heartbeat
+        );
     }
 }

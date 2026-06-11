@@ -3,7 +3,6 @@
 namespace BildVitta\SpVendas\Console\Commands\Messages;
 
 use BildVitta\SpVendas\Console\Commands\Messages\Resources\MessageSale;
-use Exception;
 use Illuminate\Console\Command;
 use PhpAmqpLib\Connection\AMQPSSLConnection;
 use PhpAmqpLib\Connection\AMQPStreamConnection;

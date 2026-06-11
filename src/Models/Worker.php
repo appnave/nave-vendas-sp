@@ -65,8 +65,8 @@ class Worker extends Model
      * @var array
      */
     protected $casts = [
-        'payload' => 'object',
-        'error' => 'object',
+        'payload'  => 'object',
+        'error'    => 'object',
         'attempts' => 'int',
         'schedule' => 'datetime'
     ];

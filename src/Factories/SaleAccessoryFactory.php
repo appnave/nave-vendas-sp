@@ -35,9 +35,9 @@ class SaleAccessoryFactory extends Factory
         $accessory = $sale->real_estate_development->accessories->first();
 
         return [
-            'uuid' => fake()->uuid(),
-            'sale_id' => $sale,
-            'accessory_id' => $accessory->accessory,
+            'uuid'                  => fake()->uuid(),
+            'sale_id'               => $sale,
+            'accessory_id'          => $accessory->accessory,
             'accessory_category_id' => $accessory->category,
         ];
     }

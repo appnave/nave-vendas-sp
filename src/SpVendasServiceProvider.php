@@ -19,7 +19,7 @@ class SpVendasServiceProvider extends PackageServiceProvider
      * @var string $seeder
      */
     protected string $seeder = 'SpVendasSeeder';
-    
+
     /**
      * @param  Package  $package
      *

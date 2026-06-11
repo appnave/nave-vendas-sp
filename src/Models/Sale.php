@@ -20,23 +20,23 @@ class Sale extends BaseModel
     public const STATUS = [
         'permutation' => 'Permutante',      // 10 - Permutante - Reserva para permutante
 
-        'simulation' => 'Simulação',        // 15 - Interesse - Unidade selecionada
+        'simulation'  => 'Simulação',        // 15 - Interesse - Unidade selecionada
         'in_approval' => 'Em aprovação',    // 15 - Interesse - Unidade selecionada
-        'reproved' => 'Recusada',           // 15 - Interesse - Unidade selecionada
-        'processing' => 'Processando',      // 15 - Interesse - Unidade selecionada
-        'failed' => 'Falhou',               // 15 - Interesse - Unidade selecionada
+        'reproved'    => 'Recusada',           // 15 - Interesse - Unidade selecionada
+        'processing'  => 'Processando',      // 15 - Interesse - Unidade selecionada
+        'failed'      => 'Falhou',               // 15 - Interesse - Unidade selecionada
 
-        'pre_sold' => 'Pré-Venda',          // 30 - Pré-venda - Proposta aprovada
+        'pre_sold'   => 'Pré-Venda',          // 30 - Pré-venda - Proposta aprovada
         'commercial' => 'Comercial',        // 35 - Comercial - Impressão do contrato
-        'legal' => 'Jurídico',              // 40 - Bild Jurídico / Vitta assinado - Validação comercial do contrato
-        'credit' => 'Crédito',              // 45 - Crédito imobiliário/Repasse - Validação jurídica do contrato
-        'sold' => 'Vendida',                // 50 - Vendido - Venda validada
+        'legal'      => 'Jurídico',              // 40 - Bild Jurídico / Vitta assinado - Validação comercial do contrato
+        'credit'     => 'Crédito',              // 45 - Crédito imobiliário/Repasse - Validação jurídica do contrato
+        'sold'       => 'Vendida',                // 50 - Vendido - Venda validada
         'distracted' => 'Distrato',         // 55 - Venda distratada - Venda distratada
-        'canceled' => 'Cancelada',          // 60 - Venda cancelada - Venda cancelada
+        'canceled'   => 'Cancelada',          // 60 - Venda cancelada - Venda cancelada
     ];
 
     public const COMMISSION_OPTIONS = [
-        'sales_team' => 'Equipe de Vendas',
+        'sales_team'           => 'Equipe de Vendas',
         'external_real_estate' => 'Imobiliária Externa'
     ];
 

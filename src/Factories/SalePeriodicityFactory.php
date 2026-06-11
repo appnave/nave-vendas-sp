@@ -29,14 +29,14 @@ class SalePeriodicityFactory extends Factory
     {
         /** @var Sale $sale */
         $sale = Sale::inRandomOrder()->first();
-        
+
         return [
-            'uuid' => fake()->uuid(),
-            'sale_id' => $sale,
-            'periodicity' => fake()->randomKey(SalePeriodicity::PERIODICITY_LIST),
-            'installments' => fake()->numberBetween(1, 40),
+            'uuid'              => fake()->uuid(),
+            'sale_id'           => $sale,
+            'periodicity'       => fake()->randomKey(SalePeriodicity::PERIODICITY_LIST),
+            'installments'      => fake()->numberBetween(1, 40),
             'installment_price' => fake()->randomFloat(2, 100, 10000),
-            'due_at' => fake()->date(),
+            'due_at'            => fake()->date(),
         ];
     }
 }

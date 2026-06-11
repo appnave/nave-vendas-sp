@@ -58,7 +58,7 @@ class SaleImportJob extends BaseJob
                 unset($payload->total);
                 $this->worker->update([
                     'payload' => $payload,
-                    'status' => 'finished'
+                    'status'  => 'finished'
                 ]);
             }
         }
@@ -205,7 +205,7 @@ class SaleImportJob extends BaseJob
                 'reda.uuid as real_estate_development_accessory_uuid',
                 'ac.uuid as accessory_category_uuid',
             ]);
-        
+
         if (is_null($this->worker->payload->total)) {
             $payload = $this->worker->payload;
             $payload->total = $query->count();
@@ -266,7 +266,7 @@ class SaleImportJob extends BaseJob
             $payload->total = $query->count();
             $this->worker->update(['payload' => $payload]);
         }
-    
+
         if ($this->worker->payload->total > 0) {
             $query->limit($this->worker->payload->limit)->offset($this->worker->payload->offset);
             $query->get()->each(function ($item) {

@@ -13,7 +13,10 @@ use Throwable;
 
 abstract class BaseJob implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * The number of times the job may be attempted.
@@ -38,7 +41,7 @@ abstract class BaseJob implements ShouldQueue
      * @var Worker
      */
     protected $worker;
-    
+
     /**
      * @param int $workerId
      */
@@ -62,20 +65,20 @@ abstract class BaseJob implements ShouldQueue
 
         config([
             'database.connections.vendas' => [
-                'driver' => 'mysql',
-                'host' => config('sp-vendas.db.host'),
-                'port' => config('sp-vendas.db.port'),
-                'database' => config('sp-vendas.db.database'),
-                'username' => config('sp-vendas.db.username'),
-                'password' => config('sp-vendas.db.password'),
-                'unix_socket' => env('DB_SOCKET', ''),
-                'charset' => 'utf8mb4',
-                'collation' => 'utf8mb4_unicode_ci',
-                'prefix' => '',
+                'driver'         => 'mysql',
+                'host'           => config('sp-vendas.db.host'),
+                'port'           => config('sp-vendas.db.port'),
+                'database'       => config('sp-vendas.db.database'),
+                'username'       => config('sp-vendas.db.username'),
+                'password'       => config('sp-vendas.db.password'),
+                'unix_socket'    => env('DB_SOCKET', ''),
+                'charset'        => 'utf8mb4',
+                'collation'      => 'utf8mb4_unicode_ci',
+                'prefix'         => '',
                 'prefix_indexes' => true,
-                'strict' => true,
-                'engine' => null,
-                'options' => [],
+                'strict'         => true,
+                'engine'         => null,
+                'options'        => [],
             ]
         ]);
 
@@ -114,11 +117,11 @@ abstract class BaseJob implements ShouldQueue
 
         $this->worker->update([
             'status' => 'error',
-            'error' => json_encode([
+            'error'  => json_encode([
                 'message' => $exception->getMessage(),
-                'file' => $exception->getFile(),
-                'line' => $exception->getLine(),
-                'trace' => $exception->getTraceAsString(),
+                'file'    => $exception->getFile(),
+                'line'    => $exception->getLine(),
+                'trace'   => $exception->getTraceAsString(),
             ]),
         ]);
     }

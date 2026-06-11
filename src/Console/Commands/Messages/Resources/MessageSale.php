@@ -90,27 +90,27 @@ class MessageSale
         $data = [
             'uuid' => $this->sale->uuid,
 
-            'external_code' => $this->sale->external_code,
-            'contract_ref_uuid' => $this->sale->contract_ref_uuid,
-            'concretized' => $this->sale->concretized,
-            'special_needs' => $this->sale->special_needs,
-            'input' => $this->sale->input,
-            'price_total' => $this->sale->price_total,
-            'is_insurance' => $this->sale->is_insurance,
-            'commission_option' => $this->sale->commission_option,
-            'commission_manager' => $this->sale->commission_manager,
-            'commission_supervisor' => $this->sale->commission_supervisor,
-            'commission_seller' => $this->sale->commission_seller,
+            'external_code'          => $this->sale->external_code,
+            'contract_ref_uuid'      => $this->sale->contract_ref_uuid,
+            'concretized'            => $this->sale->concretized,
+            'special_needs'          => $this->sale->special_needs,
+            'input'                  => $this->sale->input,
+            'price_total'            => $this->sale->price_total,
+            'is_insurance'           => $this->sale->is_insurance,
+            'commission_option'      => $this->sale->commission_option,
+            'commission_manager'     => $this->sale->commission_manager,
+            'commission_supervisor'  => $this->sale->commission_supervisor,
+            'commission_seller'      => $this->sale->commission_seller,
             'commission_real_estate' => $this->sale->commission_real_estate,
-            'justified' => $this->sale->justified,
-            'customer_justified' => $this->sale->customer_justified,
-            'customer_justified_at' => $this->sale->customer_justified_at,
-            'justified_at' => $this->sale->justified_at,
-            'made_at' => $this->sale->made_at,
-            'made_by' => $this->sale->made_by,
-            'status' => $this->sale->status,
-            'signed_contract_at' => $this->sale->signed_contract_at,
-            'bill_paid_at' => $this->sale->bill_paid_at,
+            'justified'              => $this->sale->justified,
+            'customer_justified'     => $this->sale->customer_justified,
+            'customer_justified_at'  => $this->sale->customer_justified_at,
+            'justified_at'           => $this->sale->justified_at,
+            'made_at'                => $this->sale->made_at,
+            'made_by'                => $this->sale->made_by,
+            'status'                 => $this->sale->status,
+            'signed_contract_at'     => $this->sale->signed_contract_at,
+            'bill_paid_at'           => $this->sale->bill_paid_at,
 
 
             'real_estate_development_id' => optional(
@@ -199,13 +199,13 @@ class MessageSale
             $data = [
                 'uuid' => $periodicity->uuid,
 
-                'sale_id' => $sale->id,
-                'periodicity' => $periodicity->periodicity,
-                'installments' => $periodicity->installments,
-                'installment_price' => $periodicity->installment_price,
+                'sale_id'            => $sale->id,
+                'periodicity'        => $periodicity->periodicity,
+                'installments'       => $periodicity->installments,
+                'installment_price'  => $periodicity->installment_price,
                 'installment_amount' => $periodicity->installment_amount,
-                'payment_method' => $periodicity->payment_method,
-                'due_at' => $periodicity->due_at,
+                'payment_method'     => $periodicity->payment_method,
+                'due_at'             => $periodicity->due_at,
 
                 'created_at' => $periodicity->created_at,
                 'updated_at' => $periodicity->updated_at,
@@ -226,7 +226,7 @@ class MessageSale
             $data = [
                 'uuid' => $accessory->uuid,
 
-                'sale_id' => $sale->id,
+                'sale_id'               => $sale->id,
                 'accessory_category_id' => optional(
                     config('sp-produto.model_accessory_category')::withTrashed()
                     ->select('id')

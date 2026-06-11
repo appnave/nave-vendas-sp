@@ -18,24 +18,24 @@ class SalePeriodicity extends BaseModel
 
     public const PERIODICITY_LIST = [
         // produto
-        'financing' => 'Financiamento',
-        'fgts' => 'FGTS',
-        'subsidy' => 'Subsídio',
-        'down_payment' => 'Entrada',
-        'intermediate' => 'Intermediária',
-        'post_construction' => 'Pós-obra',
-        'monthly' => 'Mensal',
-        'bimonthly' => 'Bimestral',
-        'quarterly' => 'Trimestral',
-        'semiannual' => 'Semestral',
-        'yearly' => 'Anual',
+        'financing'          => 'Financiamento',
+        'fgts'               => 'FGTS',
+        'subsidy'            => 'Subsídio',
+        'down_payment'       => 'Entrada',
+        'intermediate'       => 'Intermediária',
+        'post_construction'  => 'Pós-obra',
+        'monthly'            => 'Mensal',
+        'bimonthly'          => 'Bimestral',
+        'quarterly'          => 'Trimestral',
+        'semiannual'         => 'Semestral',
+        'yearly'             => 'Anual',
         'conclusion_balance' => 'Saldo Conclusão',
 
         //vendas
-        'signal' => 'Sinal',
-        'periodicity' => 'Periodicidade',
-        'final' => 'Final',
-        'vehicle_exchange' => 'Dação em pagamento - Veículo',
+        'signal'                           => 'Sinal',
+        'periodicity'                      => 'Periodicidade',
+        'final'                            => 'Final',
+        'vehicle_exchange'                 => 'Dação em pagamento - Veículo',
         'real_estate_development_exchange' => 'Dação em pagamento - Imóvel',
     ];
 
@@ -60,7 +60,7 @@ class SalePeriodicity extends BaseModel
         'installment_amount',
         'payment_method',
         'due_at',
-        
+
 
         'created_at',
         'updated_at',

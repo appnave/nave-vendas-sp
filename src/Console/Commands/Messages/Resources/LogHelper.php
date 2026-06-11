@@ -24,9 +24,9 @@ trait LogHelper
             $worker->status = 'error';
             $worker->error = [
                 'message' => $exception->getMessage(),
-                'file' => $exception->getFile(),
-                'line' => $exception->getLine(),
-                'trace' => $exception->getTraceAsString(),
+                'file'    => $exception->getFile(),
+                'line'    => $exception->getLine(),
+                'trace'   => $exception->getTraceAsString(),
             ];
             $worker->schedule = now();
             $worker->save();

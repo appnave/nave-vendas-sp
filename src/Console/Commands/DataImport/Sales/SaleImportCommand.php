@@ -35,7 +35,7 @@ class SaleImportCommand extends Command
     public function handle()
     {
         $this->info('Starting import');
-        
+
         $selectLimit = 500;
         if ($optionSelect = $this->option('select')) {
             $selectLimit = (int) $optionSelect;
@@ -45,7 +45,7 @@ class SaleImportCommand extends Command
         if ($optionOffset = $this->option('offset')) {
             $offset = (int) $optionOffset;
         }
-        
+
         $tableIndex = 0;
         $tables = explode(',', $this->option('tables'));
 
@@ -54,11 +54,11 @@ class SaleImportCommand extends Command
         $worker->status = 'created';
         $worker->schedule = now();
         $worker->payload = [
-            'limit' => $selectLimit,
-            'offset' => $offset,
-            'total' => null,
+            'limit'       => $selectLimit,
+            'offset'      => $offset,
+            'total'       => null,
             'table_index' => $tableIndex,
-            'tables' => $tables,
+            'tables'      => $tables,
         ];
         $worker->save();
 

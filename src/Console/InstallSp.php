@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpMissingFieldTypeInspection */
 
 namespace BildVitta\SpVendas\Console;
@@ -21,7 +22,7 @@ class InstallSp extends Command
      */
     private const VENDOR_PUBLISH_CONFIG_PARAMS = [
         '--provider' => SpVendasServiceProvider::class,
-        '--tag' => 'sp-vendas-config'
+        '--tag'      => 'sp-vendas-config'
     ];
 
     /**
@@ -156,7 +157,7 @@ class InstallSp extends Command
     {
         $this->call('vendor:publish', [
             '--provider' => SpVendasServiceProvider::class,
-            '--tag' => 'seeders'
+            '--tag'      => 'seeders'
         ]);
     }
 

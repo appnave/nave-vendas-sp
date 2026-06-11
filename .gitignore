@@ -3,7 +3,6 @@
 .php_cs.cache
 .phpunit.result.cache
 build
-composer.lock
 coverage
 docs
 phpunit.xml
@@ -11,3 +10,4 @@ psalm.xml
 testbench.yaml
 vendor
 node_modules
+auth.json
